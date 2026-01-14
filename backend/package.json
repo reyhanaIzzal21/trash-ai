@@ -1,0 +1,17 @@
+{
+    "name": "serverless-demo",
+    "version": "1.0.0",
+    "scripts": {
+        "local": "pip3 install -r requirements.txt && serverless offline --region us-east-2 --stage local",
+        "watch": "nodemon --watch '*.py' --watch serverless.yml -x 'yarn run local'",
+        "start": "npm run watch"
+    },
+    "dependencies": {
+        "form-data": "^4.0.0",
+        "nodemon": "^2.0.15",
+        "serverless": "^3.1.1",
+        "serverless-localstack": "^0.4.35",
+        "serverless-offline": "^8.5.0",
+        "serverless-python-requirements": "^5.4.0"
+    }
+}
