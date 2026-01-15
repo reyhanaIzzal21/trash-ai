@@ -26,9 +26,6 @@
 
                 <ul class="feature-list">
                     <li>
-                        <span class="check-icon">✓</span> Real time trash exudation
-                    </li>
-                    <li>
                         <span class="check-icon">✓</span> Wireless generation for
                         high waste alerts
                     </li>

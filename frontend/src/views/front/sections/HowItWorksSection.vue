@@ -36,7 +36,7 @@ export default defineComponent({
             },
             {
                 title: 'ANALYZE',
-                description: 'On-board GPU processes images in real time.'
+                description: 'Integrated GPU for image processing.'
             },
             {
                 title: 'RESULT',
