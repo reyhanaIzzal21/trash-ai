@@ -4,45 +4,27 @@
         <!-- Tabs Navigation -->
         <v-row align="center" class="mb-4">
             <v-col align="center" justify="center">
-                <v-tabs
-                    v-model="selected"
-                    class="summary-tabs"
-                    grow
-                    center-active
-                    centered
-                    :show-arrows="is_mobile"
-                >
-                    <v-tab
-                        value="detections"
-                        :class="tclass('detections')"
-                        v-if="summary.detected_objects.length > 0"
-                        @click="$router.push({ name: 'summary', params: { tab: 'detections' } })"
-                    >
+                <v-tabs v-model="selected" class="summary-tabs" grow center-active centered :show-arrows="is_mobile">
+                    <v-tab value="detections" :class="tclass('detections')" v-if="summary.detected_objects.length > 0"
+                        @click="$router.push({ name: 'summary', params: { tab: 'detections' } })">
                         <v-icon start class="tab-icon">mdi-check-circle</v-icon>
                         <span v-if="!is_mobile">Detections</span>
                     </v-tab>
-                    <v-tab
-                        value="nodetections"
-                        :class="tclass('nodetections')"
+                    <v-tab value="nodetections" :class="tclass('nodetections')"
                         v-if="summary.no_detection_hashes.length > 0"
-                        @click="$router.push({ name: 'summary', params: { tab: 'nodetections' } })"
-                    >
+                        @click="$router.push({ name: 'summary', params: { tab: 'nodetections' } })">
                         <v-icon start class="tab-icon">mdi-alert-circle</v-icon>
                         <span v-if="!is_mobile">No Detections</span>
                     </v-tab>
-                    <v-tab
-                        value="maps"
-                        :class="tclass('maps')"
-                        v-if="summary.gps.list.length > 0"
-                        @click="$router.push({ name: 'summary', params: { tab: 'maps' } })"
-                    >
+                    <v-tab value="maps" :class="tclass('maps')" v-if="summary.gps.list.length > 0"
+                        @click="$router.push({ name: 'summary', params: { tab: 'maps' } })">
                         <v-icon start class="tab-icon">mdi-map</v-icon>
                         <span v-if="!is_mobile">Map Summary</span>
                     </v-tab>
                 </v-tabs>
             </v-col>
         </v-row>
-        
+
         <!-- Content Card -->
         <div class="summary-content">
             <v-window v-model="selected">
@@ -54,23 +36,22 @@
                     </div>
                     <NoDetectGroup />
                 </v-window-item>
-                
+
                 <!-- Detections Tab -->
                 <v-window-item value="detections" v-if="summary.detected_objects.length > 0">
                     <div class="section-header">
                         <v-icon class="mr-2 text-neon">mdi-check-circle</v-icon>
                         <h2>Detected Objects</h2>
                     </div>
+
+                    <!-- Chart Section -->
+                    <div class="chart-section mb-6" v-if="detections && detections.length > 0">
+                        <TrashChart :data="detections" />
+                    </div>
+
                     <div class="detections-list">
-                        <div
-                            class="detection-row"
-                            v-for="(det, idx) in detections"
-                            :key="'det' + idx"
-                        >
-                            <router-link
-                                class="detection-link"
-                                :to="{ name: 'detection', params: { name: det.name } }"
-                            >
+                        <div class="detection-row" v-for="(det, idx) in detections" :key="'det' + idx">
+                            <router-link class="detection-link" :to="{ name: 'detection', params: { name: det.name } }">
                                 <v-icon class="detection-icon" size="20">mdi-tag</v-icon>
                                 <span class="detection-name">{{ det.name }}</span>
                             </router-link>
@@ -80,7 +61,7 @@
                         </div>
                     </div>
                 </v-window-item>
-                
+
                 <!-- Maps Tab -->
                 <v-window-item value="maps" v-if="summary.gps.list.length > 0">
                     <div class="section-header">
@@ -101,6 +82,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import * as m from '@/lib'
+import TrashChart from '@/components/TrashChart.vue'
 
 interface Data {
     summary: m.Summary | null
@@ -113,6 +95,9 @@ interface Rank {
 }
 
 export default defineComponent({
+    components: {
+        TrashChart,
+    },
     data(): Data {
         return {
             summary: null,
@@ -281,4 +266,3 @@ export default defineComponent({
     margin-right: 8px;
 }
 </style>
-

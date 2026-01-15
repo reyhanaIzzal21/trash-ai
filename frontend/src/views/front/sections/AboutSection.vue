@@ -1,5 +1,5 @@
 <template>
-    <section class="about-section">
+    <section class="about-section" id="about">
         <div class="section-header">
             <h2>THE MISSION</h2>
             <div class="underline"></div>

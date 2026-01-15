@@ -1,5 +1,5 @@
 <template>
-    <section class="impact-visual-section">
+    <section class="impact-visual-section" id="impact">
         <div class="content-wrapper">
             <!-- Left Side: Dashboard Preview / Chart -->
             <div class="dashboard-preview">

@@ -1,5 +1,5 @@
 <template>
-    <section class="feature-section">
+    <section class="feature-section" id="features">
         <div class="section-header">
             <h2>RECOGNITION CAPABILITIES</h2>
             <div class="underline"></div>

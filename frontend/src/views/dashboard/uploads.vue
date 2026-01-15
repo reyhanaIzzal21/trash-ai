@@ -4,7 +4,9 @@
         <div class="uploads-card">
             <v-row align="center" justify="center">
                 <v-col align="center" justify="center">
-                    <DragDropTitle />
+                    <!-- 
+                    <DragDropTitle /> 
+                    -->
                     
                     <!-- Current Processing Item -->
                     <Thumb

@@ -1,5 +1,5 @@
 <template>
-    <section class="how-it-works-section">
+    <section class="how-it-works-section" id="how-it-works">
         <div class="section-header">
             <h2>OPERATIONAL FLOW</h2>
             <div class="underline"></div>
