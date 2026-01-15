@@ -14,11 +14,11 @@
                         reveal-direction="start" :use-original-chars-only="false" animate-on="view"
                         class-name="text-green-500" encrypted-class-name="text-red-500" />
                     <span class="text-neon">
-                        <DecryptedText text=" INVISIBLE" :speed="90" :max-iterations="10" :sequential="true"
+                        <DecryptedText text=" INVISIBLE" :speed="70" :max-iterations="10" :sequential="true"
                             reveal-direction="start" :use-original-chars-only="false" animate-on="view"
                             class-name="text-green-500" encrypted-class-name="text-red-500" />
                     </span><br />
-                    <DecryptedText text="PROTECTING THE FUTURE" :speed="120" :max-iterations="10" :sequential="true"
+                    <DecryptedText text="PROTECTING THE FUTURE" :speed="80" :max-iterations="10" :sequential="true"
                         reveal-direction="start" :use-original-chars-only="false" animate-on="view"
                         class-name="text-green-500" encrypted-class-name="text-red-500" />
                 </h1>
