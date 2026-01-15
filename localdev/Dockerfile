@@ -1,4 +1,4 @@
-FROM node:14.18-buster
+FROM node:20-bullseye
 
 # Set this to whatever your local user id is
 ENV USER_ID=1000

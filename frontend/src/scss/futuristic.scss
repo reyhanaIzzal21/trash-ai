@@ -1,0 +1,481 @@
+// Futuristic Theme - Cyberpunk Inspired Styles
+// Primary: Neon Green (#16FF00) | Background: Deep Black (#0a0a0a)
+
+// =============================================
+// CSS CUSTOM PROPERTIES
+// =============================================
+:root {
+    --neon-green: #16FF00;
+    --neon-green-dim: #00cc6a;
+    --neon-cyan: #00ffff;
+    --neon-purple: #9945ff;
+    --dark-bg: #0a0a0a;
+    --dark-surface: #121212;
+    --dark-surface-2: #1a1a1a;
+    --dark-surface-3: #1e1e1e;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --error-red: #ff4444;
+    --warning-amber: #ffaa00;
+
+    // Glow effects
+    --glow-green: 0 0 20px rgba(0, 255, 136, 0.5), 0 0 40px rgba(0, 255, 136, 0.3);
+    --glow-green-soft: 0 0 10px rgba(0, 255, 136, 0.3);
+    --glow-cyan: 0 0 20px rgba(0, 255, 255, 0.5);
+    --glow-red: 0 0 15px rgba(255, 68, 68, 0.5);
+}
+
+// =============================================
+// GLOBAL STYLES
+// =============================================
+body {
+    background: var(--dark-bg) !important;
+    color: var(--text-primary);
+    font-family: 'Roboto', 'Inter', sans-serif;
+}
+
+// =============================================
+// GLASSMORPHISM CARDS
+// =============================================
+.glass-card {
+    background: linear-gradient(135deg, rgba(18, 18, 18, 0.9) 0%, rgba(26, 26, 26, 0.8) 100%) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 136, 0.2) !important;
+    border-radius: 12px !important;
+    transition: all 0.3s ease;
+
+    &:hover {
+        border-color: rgba(0, 255, 136, 0.5) !important;
+        box-shadow: var(--glow-green-soft);
+    }
+}
+
+.glass-card-glow {
+    @extend .glass-card;
+    box-shadow: var(--glow-green-soft);
+
+    &:hover {
+        box-shadow: var(--glow-green);
+        transform: translateY(-2px);
+    }
+}
+
+// =============================================
+// NEON BORDERS
+// =============================================
+.neon-border {
+    border: 1px solid var(--neon-green) !important;
+    box-shadow: var(--glow-green-soft);
+}
+
+.neon-border-animated {
+    border: 1px solid var(--neon-green) !important;
+    animation: neon-pulse 2s ease-in-out infinite;
+}
+
+@keyframes neon-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 5px rgba(0, 255, 136, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(0, 255, 136, 0.6), 0 0 30px rgba(0, 255, 136, 0.4);
+    }
+}
+
+// =============================================
+// BUTTONS
+// =============================================
+.btn-neon {
+    background: linear-gradient(135deg, var(--neon-green) 0%, var(--neon-green-dim) 100%) !important;
+    color: #000 !important;
+    font-weight: 600;
+    border: none !important;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    &:hover {
+        box-shadow: var(--glow-green);
+        transform: translateY(-1px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+.btn-neon-outline {
+    background: transparent !important;
+    color: var(--neon-green) !important;
+    border: 2px solid var(--neon-green) !important;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: rgba(0, 255, 136, 0.1) !important;
+        box-shadow: var(--glow-green-soft);
+    }
+}
+
+// =============================================
+// TABS - FUTURISTIC STYLE
+// =============================================
+.futuristic-tabs {
+    .v-tab {
+        color: var(--text-secondary) !important;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: var(--neon-green) !important;
+        }
+
+        &.v-tab--selected {
+            color: var(--neon-green) !important;
+        }
+    }
+
+    .v-tabs-slider {
+        background: var(--neon-green) !important;
+        box-shadow: var(--glow-green);
+    }
+}
+
+// =============================================
+// PROGRESS BARS
+// =============================================
+.progress-neon {
+    background: var(--dark-surface-2) !important;
+    border-radius: 12px;
+    overflow: hidden;
+
+    .v-progress-linear__determinate {
+        background: linear-gradient(90deg, var(--neon-green-dim), var(--neon-green), var(--neon-cyan)) !important;
+        box-shadow: var(--glow-green);
+        animation: progress-glow 1.5s ease-in-out infinite;
+    }
+}
+
+@keyframes progress-glow {
+
+    0%,
+    100% {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(1.2);
+    }
+}
+
+// =============================================
+// CHIPS
+// =============================================
+.chip-neon {
+    background: rgba(0, 255, 136, 0.15) !important;
+    color: var(--neon-green) !important;
+    border: 1px solid var(--neon-green) !important;
+    font-weight: 500;
+
+    &:hover {
+        background: rgba(0, 255, 136, 0.25) !important;
+        box-shadow: var(--glow-green-soft);
+    }
+}
+
+.chip-error {
+    background: rgba(255, 68, 68, 0.15) !important;
+    color: var(--error-red) !important;
+    border: 1px solid var(--error-red) !important;
+}
+
+// =============================================
+// NAVIGATION DRAWER
+// =============================================
+.nav-futuristic {
+    background: linear-gradient(180deg, var(--dark-surface) 0%, var(--dark-bg) 100%) !important;
+    border-right: 1px solid rgba(0, 255, 136, 0.2) !important;
+
+    .v-list-item {
+        margin: 4px 8px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: rgba(0, 255, 136, 0.1) !important;
+        }
+
+        &.v-list-item--active {
+            background: rgba(0, 255, 136, 0.15) !important;
+            border-left: 3px solid var(--neon-green);
+
+            .v-icon {
+                color: var(--neon-green) !important;
+            }
+        }
+
+        .v-icon {
+            color: var(--text-secondary);
+            transition: color 0.3s ease;
+        }
+    }
+}
+
+// =============================================
+// APP BAR
+// =============================================
+.appbar-futuristic {
+    background: linear-gradient(90deg, var(--dark-surface) 0%, var(--dark-bg) 50%, var(--dark-surface) 100%) !important;
+    border-bottom: 1px solid rgba(0, 255, 136, 0.3) !important;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 255, 136, 0.1) !important;
+
+    .v-toolbar-title {
+        color: var(--neon-green) !important;
+        font-weight: 700;
+        text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+    }
+}
+
+// =============================================
+// STAT CARDS
+// =============================================
+.stat-card {
+    background: var(--dark-surface-2) !important;
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+
+    &:hover {
+        border-color: var(--neon-green);
+        box-shadow: var(--glow-green-soft);
+        transform: translateY(-2px);
+    }
+
+    .stat-label {
+        color: var(--text-secondary);
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 8px;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--neon-green);
+        text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+    }
+
+    &.stat-error .stat-value {
+        color: var(--error-red);
+        text-shadow: 0 0 10px rgba(255, 68, 68, 0.3);
+    }
+}
+
+// =============================================
+// IMAGE THUMBNAILS
+// =============================================
+.thumb-card {
+    background: var(--dark-surface-2) !important;
+    border: 1px solid rgba(0, 255, 136, 0.15);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        border-color: var(--neon-green);
+        box-shadow: var(--glow-green);
+        transform: translateY(-4px) scale(1.02);
+    }
+
+    .thumb-header {
+        background: var(--dark-surface-3);
+        padding: 8px 12px;
+        border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+
+        b {
+            color: var(--text-primary);
+            font-size: 0.9rem;
+        }
+    }
+
+    .thumb-icons {
+        padding: 6px 12px;
+        background: var(--dark-surface);
+    }
+}
+
+// =============================================
+// DROP ZONE
+// =============================================
+.drop-zone {
+    border: 2px dashed rgba(0, 255, 136, 0.4) !important;
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    transition: all 0.3s ease;
+    background: rgba(0, 255, 136, 0.02);
+
+    &:hover,
+    &.drag-over {
+        border-color: var(--neon-green) !important;
+        background: rgba(0, 255, 136, 0.05);
+        box-shadow: inset 0 0 30px rgba(0, 255, 136, 0.1);
+    }
+
+    .drop-icon {
+        font-size: 48px;
+        color: var(--neon-green);
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .drop-text {
+        color: var(--text-secondary);
+        margin-top: 12px;
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+// =============================================
+// PAGINATION
+// =============================================
+.pagination-neon {
+    .v-pagination__item {
+        background: var(--dark-surface-2) !important;
+        color: var(--text-secondary) !important;
+        border: 1px solid rgba(0, 255, 136, 0.2);
+        transition: all 0.3s ease;
+
+        &:hover {
+            border-color: var(--neon-green);
+            color: var(--neon-green) !important;
+        }
+
+        &.v-pagination__item--is-active {
+            background: var(--neon-green) !important;
+            color: #000 !important;
+            box-shadow: var(--glow-green-soft);
+        }
+    }
+
+    .v-pagination__prev,
+    .v-pagination__next {
+        background: var(--dark-surface-2) !important;
+        border: 1px solid rgba(0, 255, 136, 0.2);
+
+        &:hover {
+            border-color: var(--neon-green);
+        }
+    }
+}
+
+// =============================================
+// LINKS
+// =============================================
+a {
+    color: var(--neon-green);
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: var(--neon-cyan);
+        text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+    }
+}
+
+// =============================================
+// SCROLLBAR
+// =============================================
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--dark-surface-3);
+    border-radius: 4px;
+
+    &:hover {
+        background: var(--neon-green-dim);
+    }
+}
+
+// =============================================
+// UTILITY CLASSES
+// =============================================
+.text-neon {
+    color: var(--neon-green) !important;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+.text-neon-glow {
+    color: var(--neon-green) !important;
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.6), 0 0 30px rgba(0, 255, 136, 0.4);
+}
+
+.bg-dark-1 {
+    background: var(--dark-bg) !important;
+}
+
+.bg-dark-2 {
+    background: var(--dark-surface) !important;
+}
+
+.bg-dark-3 {
+    background: var(--dark-surface-2) !important;
+}
+
+// =============================================
+// ICON ANIMATIONS
+// =============================================
+.icon-pulse {
+    animation: icon-pulse 2s ease-in-out infinite;
+}
+
+@keyframes icon-pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: scale(1.1);
+    }
+}
+
+// =============================================
+// SECTION DIVIDERS
+// =============================================
+.divider-neon {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--neon-green), transparent);
+    border: none;
+    margin: 24px 0;
+}

@@ -1,11 +1,25 @@
-// active tab
+// Futuristic Tab Styles
+// Active tab - Neon Green Glow
 .thightlight {
-    background-color: #0185ff;
-    color: #fff;
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.2) 0%, rgba(0, 255, 136, 0.1) 100%);
+    color: #00ff22 !important;
+    border: 1px solid #16FF00;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+    transition: all 0.3s ease;
 }
 
-// inactive tab
+// Inactive tab - Dark subtle
 .tbg {
-    background-color: lightgrey;
-    color: black !important;
+    background: rgba(26, 26, 26, 0.8);
+    color: #a0a0a0 !important;
+    border: 1px solid rgba(0, 255, 136, 0.15);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        border-color: rgba(0, 255, 136, 0.4);
+        color: #16FF00 !important;
+        background: rgba(0, 255, 136, 0.05);
+    }
 }
