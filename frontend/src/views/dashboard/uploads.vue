@@ -1,19 +1,5 @@
 <template>
     <div class="uploads-container">
-        <!-- Pagination -->
-        <v-row align="center" class="mb-4">
-            <v-col align="center" justify="center">
-                <v-pagination
-                    v-if="store.hash_ids.length > 0"
-                    v-model="vpage"
-                    :length="store.nav_length"
-                    :total-visible="is_mobile ? 3 : 7"
-                    rounded="circle"
-                    class="pagination-neon"
-                />
-            </v-col>
-        </v-row>
-        
         <!-- Main Content Card -->
         <div class="uploads-card">
             <v-row align="center" justify="center">
@@ -46,6 +32,20 @@
                 </v-col>
             </v-row>
         </div>
+
+        <!-- Pagination -->
+        <v-row align="center" class="mb-4">
+            <v-col align="center" justify="center">
+                <v-pagination
+                    v-if="store.hash_ids.length > 0"
+                    v-model="vpage"
+                    :length="store.nav_length"
+                    :total-visible="is_mobile ? 3 : 7"
+                    rounded="circle"
+                    class="pagination-neon"
+                />
+            </v-col>
+        </v-row>
     </div>
 </template>
 
@@ -147,6 +147,7 @@ export default defineComponent({
     },
 })
 </script>
+
 
 <style scoped>
 .uploads-container {

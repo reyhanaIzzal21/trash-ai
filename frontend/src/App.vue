@@ -144,8 +144,9 @@
                             />
                         </div>
                         
-                        <!-- Stats Summary -->
+                        <!-- Stats Summary 
                         <TrashSummary class="mb-6" />
+                        -->
                         
                         <!-- Router View with transition -->
                         <div class="content-wrapper glass-card pa-4">

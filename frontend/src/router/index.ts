@@ -1,16 +1,22 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import type { RouteRecordRaw } from 'vue-router'
-import About from '@/views/about.vue'
-import Uploads from '@/views/uploads.vue'
-import Summary from '@/views/summary.vue'
-import Image from '@/views/image.vue'
-import Detection from '@/views/detection.vue'
-import Test from '@/views/test.vue'
+import About from '@/views/dashboard/about.vue'
+import Uploads from '@/views/dashboard/uploads.vue'
+import Summary from '@/views/dashboard/summary.vue'
+import Image from '@/views/dashboard/image.vue'
+import Detection from '@/views/dashboard/detection.vue'
+import Test from '@/views/dashboard/test.vue'
 import { log } from '@/lib/logging'
+import Home from '@/views/front/home.vue'
 
 const routes: Array<RouteRecordRaw> = [
     {
         path: '/',
+        name: 'home',
+        component: Home,
+    },
+    {
+        path: '/about',
         name: 'about',
         component: About,
     },
