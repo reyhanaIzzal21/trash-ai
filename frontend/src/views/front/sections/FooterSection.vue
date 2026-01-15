@@ -4,7 +4,7 @@
             <div class="footer-brand">
                 <div class="brand-logo">
                     <v-icon color="#16FF00">mdi-recycle</v-icon>
-                    <span>ECOSCAN AI</span>
+                    <span>Trashformers AI</span>
                 </div>
                 <p>Reinventing the future of environmental preservation through autonomous robotics and artificial intelligence.</p>
             </div>
@@ -22,7 +22,7 @@
             <div class="footer-links">
                 <h4>CONNECT</h4>
                 <ul>
-                    <li><a href="#">camera@ecoscan.ai</a></li>
+                    <li><a href="#">camera@Trashformers.ai</a></li>
                     <li><a href="#">+1 (555) 012-3456</a></li>
                     <li class="social-icons">
                         <v-icon size="small">mdi-twitter</v-icon>
@@ -34,7 +34,7 @@
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2026 EcoScan Systems. All rights reserved.</p>
+            <p>&copy; 2026 Trashformers Systems. All rights reserved.</p>
             <div class="legal-links">
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Service</a>

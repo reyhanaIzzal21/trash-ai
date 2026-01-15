@@ -22,9 +22,6 @@
                     <router-link to="/uploads/0" class="btn-primary">
                         GET STARTED
                     </router-link>
-                    <button class="btn-secondary">
-                        <span class="icon">▶</span> WATCH DEMO
-                    </button>
                 </div>
             </div>
 

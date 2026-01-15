@@ -19,7 +19,7 @@
             <div class="about-text trigger-about-text">
                 <h3>Cleaning Schools, One Plight at a Time</h3>
                 <p>
-                    EcoScan AI leverages state-of-the-art neural networks embedded in
+                    Trashformers AI leverages state-of-the-art neural networks embedded in
                     drone hardware to patrol school grounds. We detect organic,
                     plastic, and hazardous materials often missed by the human eye.
                 </p>
@@ -135,7 +135,8 @@ h2 {
     display: flex;
     align-items: flex-end;
     padding: 20px;
-    background: radial-gradient(circle at center, #222 0%, #000 100%);
+    background: url('../../../../public/drone-image.avif') no-repeat center center;
+    background-size: cover;
     position: relative;
 }
 

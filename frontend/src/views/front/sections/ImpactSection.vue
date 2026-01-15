@@ -7,7 +7,7 @@
                     <div class="dots">
                         <span></span><span></span><span></span>
                     </div>
-                    <div class="header-title">LIVE FEED // DRONE-01</div>
+                    <div class="header-title">DRONE-01</div>
                 </div>
                 
                 <div class="preview-content">
@@ -51,7 +51,7 @@
                 <h2>VISUALIZE THE IMPACT</h2>
                 <div class="underline"></div>
                 <p>
-                    Access detailed analytics on waste reduction. Schools using EcoScan AI report a
+                    Access detailed analytics on waste reduction. Schools using Trashformers AI report a
                     40% reduction in ground litter within the first 3 months.
                 </p>
 
