@@ -217,7 +217,7 @@ export default defineComponent({
 }
 
 .chart-container {
-    height: 300px;
+    height: 500px;
     min-height: 200px;
 }
 
