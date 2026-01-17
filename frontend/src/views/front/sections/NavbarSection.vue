@@ -9,6 +9,8 @@
                 <span class="brand-text">
                     <span class="text-primary">Trash</span>formers
                 </span>
+                <!-- badge for beta application 'beta' -->
+                <span class="badge">beta</span>
             </div>
 
             <!-- Desktop Navigation -->
@@ -158,6 +160,18 @@ export default defineComponent({
 
 .text-primary {
     color: #16FF00;
+}
+
+.badge{
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #16FF00;
+    background: rgba(22, 255, 0, 0.2);
+    border: 1px solid #16FF00;    
+    padding: 2px 10px;
+    letter-spacing: 1.2px;
+    margin: 0;
+    border-radius: 12px;
 }
 
 .navbar-links {
